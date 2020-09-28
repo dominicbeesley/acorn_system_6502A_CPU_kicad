@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name CPU_6502A)(type Legacy)(uri ${KIPRJMOD}/libraries/6502A.lib)(options "")(descr ""))
+  (lib (name 6522)(type Legacy)(uri ${KIPRJMOD}/libraries/wd65c22-s.lib)(options "")(descr ""))
+  (lib (name 6116)(type Legacy)(uri ${KIPRJMOD}/libraries/6116.lib)(options "")(descr ""))
+  (lib (name jumper_3_bridgeddom)(type Legacy)(uri ${KIPRJMOD}/libraries/jumper_3_bridgeddom.lib)(options "")(descr ""))
+  (lib (name din41614_c64ab)(type Legacy)(uri ${KIPRJMOD}/libraries/din41612_c64ab.lib)(options "")(descr ""))
+)

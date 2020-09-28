@@ -1,0 +1,158 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 10
+Title "6502A System 5 CPU"
+Date "2020-09-21"
+Rev "100,005/C"
+Comp "Acorn/Dossytronics"
+Comment1 "Transcribed from CKL 6/82"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R3
+U 1 1 5F97D904
+P 2050 1500
+F 0 "R3" V 2150 1500 50  0000 C CNN
+F 1 "100" V 2050 1500 50  0000 C CNN
+F 2 "LOCAL:R_Axial_DIN0309_L9.0mm_D2.0mm_P12.70mm_Horizontal" V 1980 1500 50  0001 C CNN
+F 3 "~" H 2050 1500 50  0001 C CNN
+	1    2050 1500
+	0    1    1    0   
+$EndComp
+Text HLabel 1800 1500 0    50   Input ~ 0
+KBD_NRST
+Wire Wire Line
+	1800 1500 1900 1500
+$Comp
+L Device:R R4
+U 1 1 5F97DCE7
+P 2600 1250
+F 0 "R4" V 2700 1250 50  0000 C CNN
+F 1 "4k7" V 2600 1250 50  0000 C CNN
+F 2 "LOCAL:R_Axial_DIN0309_L9.0mm_D2.0mm_P12.70mm_Horizontal" V 2530 1250 50  0001 C CNN
+F 3 "~" H 2600 1250 50  0001 C CNN
+	1    2600 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 5F97DFAA
+P 2300 1250
+F 0 "D1" V 2200 1100 50  0000 L CNN
+F 1 "1N4148" V 2400 950 50  0000 L CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2300 1250 50  0001 C CNN
+F 3 "~" H 2300 1250 50  0001 C CNN
+	1    2300 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74LS132 IC18
+U 1 1 5F97E5D8
+P 3150 1500
+F 0 "IC18" H 3150 1825 50  0000 C CNN
+F 1 "74LS132" H 3150 1734 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3150 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS132" H 3150 1500 50  0001 C CNN
+	1    3150 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 1400 2750 1400
+Wire Wire Line
+	2750 1400 2750 1500
+Wire Wire Line
+	2750 1600 2850 1600
+Wire Wire Line
+	2750 1500 2600 1500
+Connection ~ 2750 1500
+Wire Wire Line
+	2750 1500 2750 1600
+Wire Wire Line
+	2300 1400 2300 1500
+Connection ~ 2300 1500
+Wire Wire Line
+	2300 1500 2200 1500
+Wire Wire Line
+	2600 1400 2600 1500
+Connection ~ 2600 1500
+Wire Wire Line
+	2600 1500 2450 1500
+$Comp
+L power:VCC #PWR0114
+U 1 1 5F980329
+P 2450 1050
+F 0 "#PWR0114" H 2450 900 50  0001 C CNN
+F 1 "VCC" H 2467 1223 50  0000 C CNN
+F 2 "" H 2450 1050 50  0001 C CNN
+F 3 "" H 2450 1050 50  0001 C CNN
+	1    2450 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 1100 2450 1100
+Wire Wire Line
+	2450 1100 2450 1050
+Connection ~ 2450 1100
+Wire Wire Line
+	2450 1100 2300 1100
+$Comp
+L 74xx:74LS132 IC18
+U 4 1 5F981504
+P 3900 1500
+F 0 "IC18" H 3900 1825 50  0000 C CNN
+F 1 "74LS132" H 3900 1734 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3900 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS132" H 3900 1500 50  0001 C CNN
+	4    3900 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1500 3500 1500
+Wire Wire Line
+	3500 1500 3500 1400
+Wire Wire Line
+	3500 1400 3600 1400
+Wire Wire Line
+	3600 1600 3500 1600
+Wire Wire Line
+	3500 1600 3500 1500
+Connection ~ 3500 1500
+Wire Wire Line
+	4350 1500 4200 1500
+Text HLabel 4350 1500 2    50   Output ~ 0
+BUS_NRST
+$Comp
+L Device:CP C2
+U 1 1 5F984AD0
+P 2450 1800
+F 0 "C2" H 2568 1846 50  0000 L CNN
+F 1 "100u" H 2568 1755 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 2488 1650 50  0001 C CNN
+F 3 "~" H 2450 1800 50  0001 C CNN
+	1    2450 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 5F985118
+P 2450 2050
+F 0 "#PWR0115" H 2450 1800 50  0001 C CNN
+F 1 "GND" H 2455 1877 50  0000 C CNN
+F 2 "" H 2450 2050 50  0001 C CNN
+F 3 "" H 2450 2050 50  0001 C CNN
+	1    2450 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 1650 2450 1500
+Connection ~ 2450 1500
+Wire Wire Line
+	2450 1500 2300 1500
+Wire Wire Line
+	2450 1950 2450 2050
+$EndSCHEMATC

@@ -1,0 +1,450 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 10
+Title "6502A System 5 CPU"
+Date "2020-09-21"
+Rev "100,005/C"
+Comp "Acorn/Dossytronics"
+Comment1 "Transcribed from CKL 6/82"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 6522:WD65C22-S IC7
+U 1 1 5FAE219E
+P 4350 2850
+F 0 "IC7" H 4350 3900 60  0000 C CNN
+F 1 "6522" H 4350 1750 60  0000 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm_Socket" H 3850 3050 60  0001 C CNN
+F 3 "" H 3850 3050 60  0000 C CNN
+	1    4350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0130
+U 1 1 5FAE3367
+P 5750 3550
+F 0 "#PWR0130" H 5750 3400 50  0001 C CNN
+F 1 "VCC" V 5767 3678 50  0000 L CNN
+F 2 "" H 5750 3550 50  0001 C CNN
+F 3 "" H 5750 3550 50  0001 C CNN
+	1    5750 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 3550 5750 3550
+Text HLabel 5750 3450 2    50   Input ~ 0
+BUS_PHI2
+Wire Wire Line
+	5000 3450 5750 3450
+Wire Wire Line
+	5000 3350 5750 3350
+Wire Wire Line
+	5000 3250 5750 3250
+Wire Wire Line
+	5000 3150 5750 3150
+Wire Wire Line
+	5000 3050 5750 3050
+Wire Wire Line
+	5000 2950 5750 2950
+Wire Wire Line
+	5000 2850 5750 2850
+Wire Wire Line
+	5000 2750 5750 2750
+Wire Wire Line
+	5000 2650 5750 2650
+Text Label 5750 2650 2    50   ~ 0
+CPU_D0
+Text Label 5750 2750 2    50   ~ 0
+CPU_D1
+Text Label 5750 2850 2    50   ~ 0
+CPU_D2
+Text Label 5750 2950 2    50   ~ 0
+CPU_D3
+Text Label 5750 3050 2    50   ~ 0
+CPU_D4
+Text Label 5750 3150 2    50   ~ 0
+CPU_D5
+Text Label 5750 3250 2    50   ~ 0
+CPU_D6
+Text Label 5750 3350 2    50   ~ 0
+CPU_D7
+Text HLabel 5750 3650 2    50   Input ~ 0
+NCS_VIA
+Wire Wire Line
+	5000 3850 5750 3850
+Wire Wire Line
+	5000 3750 5750 3750
+Wire Wire Line
+	5000 3650 5750 3650
+Text HLabel 5750 3750 2    50   Input ~ 0
+BUS_RNW
+Text HLabel 5750 3850 2    50   Input ~ 0
+BUS_NIRQ
+Wire Wire Line
+	5000 2550 5750 2550
+Wire Wire Line
+	5000 2450 5750 2450
+Wire Wire Line
+	5000 2350 5750 2350
+Wire Wire Line
+	5000 2250 5750 2250
+Wire Wire Line
+	5000 2150 5750 2150
+Wire Wire Line
+	5000 2050 5300 2050
+Wire Wire Line
+	5000 1950 5050 1950
+Text Label 5750 1950 2    50   ~ 0
+VIA_CA1
+Text Label 5750 2050 2    50   ~ 0
+VIA_CA2
+Text Label 5750 2150 2    50   ~ 0
+BUS_A0
+Text Label 5750 2250 2    50   ~ 0
+BUS_A1
+Text Label 5750 2350 2    50   ~ 0
+BUS_A2
+Text Label 5750 2450 2    50   ~ 0
+BUS_A3
+Text HLabel 5750 2550 2    50   Input ~ 0
+BUS_NRST
+Wire Wire Line
+	2950 3550 3700 3550
+Wire Wire Line
+	2950 3450 3700 3450
+Wire Wire Line
+	2950 3350 3700 3350
+Wire Wire Line
+	2950 3250 3700 3250
+Wire Wire Line
+	2950 3150 3700 3150
+Wire Wire Line
+	2950 3050 3700 3050
+Wire Wire Line
+	2950 2950 3700 2950
+Wire Wire Line
+	2950 2850 3700 2850
+Wire Wire Line
+	2950 2750 3700 2750
+Wire Wire Line
+	2950 2650 3700 2650
+Wire Wire Line
+	2950 3850 3700 3850
+Wire Wire Line
+	2950 3750 3300 3750
+Wire Wire Line
+	2950 3650 3550 3650
+Wire Wire Line
+	2950 2550 3700 2550
+Wire Wire Line
+	2950 2450 3700 2450
+Wire Wire Line
+	2950 2350 3700 2350
+Wire Wire Line
+	2950 2250 3700 2250
+Wire Wire Line
+	2950 2150 3700 2150
+Wire Wire Line
+	2950 2050 3700 2050
+Wire Wire Line
+	2950 1950 3700 1950
+$Comp
+L power:GND #PWR0131
+U 1 1 5FAE97F1
+P 2950 1950
+F 0 "#PWR0131" H 2950 1700 50  0001 C CNN
+F 1 "GND" V 2955 1822 50  0000 R CNN
+F 2 "" H 2950 1950 50  0001 C CNN
+F 3 "" H 2950 1950 50  0001 C CNN
+	1    2950 1950
+	0    1    1    0   
+$EndComp
+Text HLabel 2950 3750 0    50   BiDi ~ 0
+BUS_VIA_CB2
+Text HLabel 2950 3650 0    50   BiDi ~ 0
+BUS_VIA_CB1
+Text Label 2950 2850 0    50   ~ 0
+BUS_VIA_PB0
+Text Label 2950 2950 0    50   ~ 0
+BUS_VIA_PB1
+Text Label 2950 3050 0    50   ~ 0
+BUS_VIA_PB2
+Text Label 2950 3150 0    50   ~ 0
+BUS_VIA_PB3
+Text Label 2950 3250 0    50   ~ 0
+BUS_VIA_PB4
+Text Label 2950 3350 0    50   ~ 0
+BUS_VIA_PB5
+Text Label 2950 3450 0    50   ~ 0
+BUS_VIA_PB6
+Text Label 2950 3550 0    50   ~ 0
+BUS_VIA_PB7
+Text Label 2950 2050 0    50   ~ 0
+VIA_PA0
+Text Label 2950 2150 0    50   ~ 0
+VIA_PA1
+Text Label 2950 2250 0    50   ~ 0
+VIA_PA2
+Text Label 2950 2350 0    50   ~ 0
+VIA_PA3
+Text Label 2950 2450 0    50   ~ 0
+VIA_PA4
+Text Label 2950 2550 0    50   ~ 0
+VIA_PA5
+Text Label 2950 2650 0    50   ~ 0
+VIA_PA6
+Text Label 2950 2750 0    50   ~ 0
+VIA_PA7
+$Comp
+L Device:R R1
+U 1 1 5FAEB504
+P 5050 1650
+F 0 "R1" H 5100 1700 50  0000 L CNN
+F 1 "4k7" V 5050 1550 50  0000 L CNN
+F 2 "LOCAL:R_Axial_DIN0309_L9.0mm_D2.0mm_P12.70mm_Horizontal" V 4980 1650 50  0001 C CNN
+F 3 "~" H 5050 1650 50  0001 C CNN
+	1    5050 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1800 5050 1950
+Connection ~ 5050 1950
+Wire Wire Line
+	5050 1950 5750 1950
+$Comp
+L Device:R R2
+U 1 1 5FAECF93
+P 5300 1650
+F 0 "R2" H 5350 1700 50  0000 L CNN
+F 1 "4k7" V 5300 1550 50  0000 L CNN
+F 2 "LOCAL:R_Axial_DIN0309_L9.0mm_D2.0mm_P12.70mm_Horizontal" V 5230 1650 50  0001 C CNN
+F 3 "~" H 5300 1650 50  0001 C CNN
+	1    5300 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 1800 5300 2050
+Connection ~ 5300 2050
+Wire Wire Line
+	5300 2050 5750 2050
+$Comp
+L power:VCC #PWR0132
+U 1 1 5FAEE605
+P 5050 1400
+F 0 "#PWR0132" H 5050 1250 50  0001 C CNN
+F 1 "VCC" H 5067 1573 50  0000 C CNN
+F 2 "" H 5050 1400 50  0001 C CNN
+F 3 "" H 5050 1400 50  0001 C CNN
+	1    5050 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1400 5050 1500
+Wire Wire Line
+	5050 1500 5300 1500
+Connection ~ 5050 1500
+$Comp
+L Device:R R12
+U 1 1 5FAF28BC
+P 3300 4050
+F 0 "R12" H 3350 4100 50  0000 L CNN
+F 1 "4k7" V 3300 3950 50  0000 L CNN
+F 2 "LOCAL:R_Axial_DIN0309_L9.0mm_D2.0mm_P12.70mm_Horizontal" V 3230 4050 50  0001 C CNN
+F 3 "~" H 3300 4050 50  0001 C CNN
+	1    3300 4050
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3300 3900 3300 3750
+$Comp
+L Device:R R11
+U 1 1 5FAF28C7
+P 3550 4050
+F 0 "R11" H 3600 4100 50  0000 L CNN
+F 1 "4k7" V 3550 3950 50  0000 L CNN
+F 2 "LOCAL:R_Axial_DIN0309_L9.0mm_D2.0mm_P12.70mm_Horizontal" V 3480 4050 50  0001 C CNN
+F 3 "~" H 3550 4050 50  0001 C CNN
+	1    3550 4050
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3550 3900 3550 3650
+$Comp
+L power:VCC #PWR0133
+U 1 1 5FAF28D2
+P 3300 4300
+F 0 "#PWR0133" H 3300 4150 50  0001 C CNN
+F 1 "VCC" H 3317 4473 50  0000 C CNN
+F 2 "" H 3300 4300 50  0001 C CNN
+F 3 "" H 3300 4300 50  0001 C CNN
+	1    3300 4300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3300 4300 3300 4200
+Wire Wire Line
+	3300 4200 3550 4200
+Connection ~ 3300 4200
+Connection ~ 3300 3750
+Wire Wire Line
+	3300 3750 3700 3750
+Connection ~ 3550 3650
+Wire Wire Line
+	3550 3650 3700 3650
+$Comp
+L Device:Jumper_NO_Small LK?
+U 1 1 5FAFD849
+P 5850 1950
+AR Path="/5F986EA1/5FAFD849" Ref="LK?"  Part="1" 
+AR Path="/5FAE1C36/5FAFD849" Ref="LK10"  Part="1" 
+F 0 "LK10" H 5850 2043 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 5850 2044 50  0001 C CNN
+F 2 "LOCAL:Pin_Header_Straight_1x02_Pitch2.54mm-tight" H 5850 1950 50  0001 C CNN
+F 3 "~" H 5850 1950 50  0001 C CNN
+	1    5850 1950
+	1    0    0    -1  
+$EndComp
+Text Label 6350 1950 2    50   ~ 0
+VIA_PA7
+Wire Wire Line
+	5950 1950 6350 1950
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even PL1
+U 1 1 5FB03572
+P 8800 2850
+F 0 "PL1" H 8850 2250 50  0000 C CNN
+F 1 "IDC_KEYB" H 8800 3400 50  0000 C CNN
+F 2 "LOCAL:IDC-Header_2x10_P2.54mm_Horizontal_Lock_noholes" H 8800 2850 50  0001 C CNN
+F 3 "~" H 8800 2850 50  0001 C CNN
+	1    8800 2850
+	-1   0    0    1   
+$EndComp
+Text Label 9750 3250 2    50   ~ 0
+VIA_CA1
+Text Label 7750 3250 0    50   ~ 0
+VIA_CA2
+Wire Wire Line
+	9000 3250 9750 3250
+Wire Wire Line
+	9000 3150 9750 3150
+Wire Wire Line
+	9000 3050 9750 3050
+Wire Wire Line
+	9000 2950 9750 2950
+Wire Wire Line
+	9000 2850 9750 2850
+Wire Wire Line
+	9000 2750 9750 2750
+Wire Wire Line
+	9000 2650 9750 2650
+Wire Wire Line
+	9000 2550 9750 2550
+Wire Wire Line
+	9000 2450 9750 2450
+Wire Wire Line
+	9000 2350 9750 2350
+Wire Wire Line
+	7750 3250 8500 3250
+Wire Wire Line
+	7750 3150 8500 3150
+Wire Wire Line
+	7750 3050 8500 3050
+Wire Wire Line
+	7750 2950 8500 2950
+Wire Wire Line
+	7750 2850 8500 2850
+Wire Wire Line
+	7750 2750 8500 2750
+Wire Wire Line
+	7750 2650 8500 2650
+Wire Wire Line
+	7750 2550 8500 2550
+Wire Wire Line
+	7750 2450 8500 2450
+Wire Wire Line
+	7750 2350 8500 2350
+NoConn ~ 9750 3150
+NoConn ~ 7750 3150
+NoConn ~ 9750 3050
+NoConn ~ 7750 3050
+NoConn ~ 9750 2950
+Text Label 5750 3450 2    50   ~ 0
+BUS_PHI2
+Text Label 7750 2950 0    50   ~ 0
+BUS_PHI2
+NoConn ~ 9750 2850
+$Comp
+L power:GND #PWR0134
+U 1 1 5FB22D55
+P 9750 2750
+F 0 "#PWR0134" H 9750 2500 50  0001 C CNN
+F 1 "GND" V 9755 2622 50  0000 R CNN
+F 2 "" H 9750 2750 50  0001 C CNN
+F 3 "" H 9750 2750 50  0001 C CNN
+	1    9750 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0135
+U 1 1 5FAE9A04
+P 2950 3850
+F 0 "#PWR0135" H 2950 3700 50  0001 C CNN
+F 1 "VCC" V 2968 3977 50  0000 L CNN
+F 2 "" H 2950 3850 50  0001 C CNN
+F 3 "" H 2950 3850 50  0001 C CNN
+	1    2950 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0136
+U 1 1 5FB25CA5
+P 9750 2650
+F 0 "#PWR0136" H 9750 2500 50  0001 C CNN
+F 1 "VCC" V 9750 2800 50  0000 L CNN
+F 2 "" H 9750 2650 50  0001 C CNN
+F 3 "" H 9750 2650 50  0001 C CNN
+	1    9750 2650
+	0    1    1    0   
+$EndComp
+Text Label 7750 2850 0    50   ~ 0
+VIA_PA0
+Text Label 7750 2750 0    50   ~ 0
+VIA_PA1
+Text Label 7750 2650 0    50   ~ 0
+VIA_PA2
+Text Label 7750 2550 0    50   ~ 0
+VIA_PA3
+Text Label 7750 2450 0    50   ~ 0
+VIA_PA4
+Text Label 7750 2350 0    50   ~ 0
+VIA_PA5
+Text Label 9750 2350 2    50   ~ 0
+VIA_PA6
+Text Label 9750 2450 2    50   ~ 0
+VIA_PA7
+Text HLabel 9750 2550 2    50   Output ~ 0
+KBD_NRST
+Wire Bus Line
+	8250 1500 9150 1500
+Wire Bus Line
+	8250 1600 9150 1600
+Wire Bus Line
+	8250 1700 9150 1700
+Text HLabel 9150 1500 2    50   Input ~ 0
+BUS_A[0..15]
+Text HLabel 9150 1600 2    50   BiDi ~ 0
+CPU_D[0..7]
+Text HLabel 9150 1700 2    50   BiDi ~ 0
+BUS_VIA_PB[0..7]
+Text Label 8250 1500 0    50   ~ 0
+BUS_A[0..15]
+Text Label 8250 1600 0    50   ~ 0
+CPU_D[0..7]
+Text Label 8250 1700 0    50   ~ 0
+BUS_VIA_PB[0..7]
+$EndSCHEMATC

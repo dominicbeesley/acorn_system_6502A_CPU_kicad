@@ -1,0 +1,230 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 10
+Title "6502A System 5 CPU"
+Date "2020-09-21"
+Rev "100,005/C"
+Comp "Acorn/Dossytronics"
+Comment1 "Transcribed from CKL 6/82"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 1600 3150 0    50   Input ~ 0
+CPU_CLK_NS
+$Comp
+L 74xx:74LS74 IC5
+U 2 1 5FA23860
+P 2300 3150
+F 0 "IC5" H 2100 3400 50  0000 C CNN
+F 1 "74LS74" H 2500 2900 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2300 3150 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 2300 3150 50  0001 C CNN
+	2    2300 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5FA23FC1
+P 1800 2850
+F 0 "R8" H 1650 2900 50  0000 L CNN
+F 1 "1k" V 1800 2750 50  0000 L CNN
+F 2 "LOCAL:R_Axial_DIN0309_L9.0mm_D2.0mm_P12.70mm_Horizontal" V 1730 2850 50  0001 C CNN
+F 3 "~" H 1800 2850 50  0001 C CNN
+	1    1800 2850
+	1    0    0    -1  
+$EndComp
+Text HLabel 1600 3050 0    50   Input ~ 0
+BUS_MR
+Wire Wire Line
+	1600 3050 1800 3050
+Wire Wire Line
+	1800 3000 1800 3050
+Connection ~ 1800 3050
+Wire Wire Line
+	1800 3050 2000 3050
+Wire Wire Line
+	1600 3150 1800 3150
+$Comp
+L power:VCC #PWR0124
+U 1 1 5FA24527
+P 2300 2600
+F 0 "#PWR0124" H 2300 2450 50  0001 C CNN
+F 1 "VCC" H 2317 2773 50  0000 C CNN
+F 2 "" H 2300 2600 50  0001 C CNN
+F 3 "" H 2300 2600 50  0001 C CNN
+	1    2300 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2850 2300 2600
+Wire Wire Line
+	2300 2600 1950 2600
+Wire Wire Line
+	1800 2600 1800 2700
+Connection ~ 2300 2600
+Wire Wire Line
+	1950 2600 1950 3550
+Wire Wire Line
+	1950 3550 2300 3550
+Wire Wire Line
+	2300 3550 2300 3450
+Connection ~ 1950 2600
+Wire Wire Line
+	1950 2600 1800 2600
+Wire Wire Line
+	2850 3050 2600 3050
+NoConn ~ 2850 3050
+$Comp
+L 74xx:74LS32 IC17
+U 3 1 5FA2501C
+P 3250 3350
+F 0 "IC17" H 3250 3550 50  0000 C CNN
+F 1 "74LS32" H 3250 3150 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3250 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 3250 3350 50  0001 C CNN
+	3    3250 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 3250 2950 3250
+Wire Wire Line
+	2950 3450 2950 3700
+Wire Wire Line
+	2950 3700 1800 3700
+Wire Wire Line
+	1800 3700 1800 3150
+Connection ~ 1800 3150
+Wire Wire Line
+	1800 3150 2000 3150
+Wire Wire Line
+	3900 3350 3800 3350
+Text HLabel 3900 3350 2    50   Output ~ 0
+CPU_CLK_PHI0
+Text Notes 2500 2750 0    50   ~ 0
+Clock stretch
+$Comp
+L 74xx:74LS74 IC5
+U 1 1 5FA28207
+P 6300 3150
+F 0 "IC5" H 6100 3400 50  0000 C CNN
+F 1 "74LS74" H 6500 2900 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6300 3150 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 6300 3150 50  0001 C CNN
+	1    6300 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3350 3800 3150
+Connection ~ 3800 3350
+Wire Wire Line
+	3800 3350 3550 3350
+$Comp
+L 74xx:74LS132 IC18
+U 2 1 5FA2938C
+P 5550 2850
+F 0 "IC18" H 5550 3050 50  0000 C CNN
+F 1 "74LS132" H 5550 2650 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5550 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS132" H 5550 2850 50  0001 C CNN
+	2    5550 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 IC1
+U 4 1 5FA2A681
+P 4750 2950
+F 0 "IC1" H 4750 3150 50  0000 C CNN
+F 1 "74S04" H 4900 2800 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4750 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 4750 2950 50  0001 C CNN
+	4    4750 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3150 6000 3150
+Wire Wire Line
+	5050 2950 5250 2950
+Wire Wire Line
+	6000 3050 5900 3050
+Wire Wire Line
+	5900 3050 5900 2850
+Wire Wire Line
+	5900 2850 5850 2850
+Text HLabel 4300 2950 0    50   Input ~ 0
+BUS_NBRQ
+Wire Wire Line
+	4450 2950 4350 2950
+$Comp
+L Device:R R7
+U 1 1 5FA35A6F
+P 4350 2700
+F 0 "R7" H 4200 2750 50  0000 L CNN
+F 1 "1k" V 4350 2600 50  0000 L CNN
+F 2 "LOCAL:R_Axial_DIN0309_L9.0mm_D2.0mm_P12.70mm_Horizontal" V 4280 2700 50  0001 C CNN
+F 3 "~" H 4350 2700 50  0001 C CNN
+	1    4350 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0125
+U 1 1 5FA35EE7
+P 4350 2450
+F 0 "#PWR0125" H 4350 2300 50  0001 C CNN
+F 1 "VCC" H 4367 2623 50  0000 C CNN
+F 2 "" H 4350 2450 50  0001 C CNN
+F 3 "" H 4350 2450 50  0001 C CNN
+	1    4350 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 2950 4350 2850
+Connection ~ 4350 2950
+Wire Wire Line
+	4350 2950 4300 2950
+Wire Wire Line
+	4350 2550 4350 2450
+Text HLabel 5050 2600 1    50   Input ~ 0
+CPU_RNW
+Wire Wire Line
+	5050 2600 5050 2750
+Wire Wire Line
+	5050 2750 5250 2750
+Text HLabel 7200 3050 2    50   Output ~ 0
+BUS_NBGT
+Text HLabel 7200 3250 2    50   Output ~ 0
+BUS_BGT
+Wire Wire Line
+	7200 3050 6600 3050
+Wire Wire Line
+	7200 3250 6600 3250
+$Comp
+L power:VCC #PWR0126
+U 1 1 5FA3D356
+P 6300 2750
+F 0 "#PWR0126" H 6300 2600 50  0001 C CNN
+F 1 "VCC" H 6317 2923 50  0000 C CNN
+F 2 "" H 6300 2750 50  0001 C CNN
+F 3 "" H 6300 2750 50  0001 C CNN
+	1    6300 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 2850 6300 2750
+$Comp
+L power:VCC #PWR0127
+U 1 1 5FA3EFF0
+P 6300 3650
+F 0 "#PWR0127" H 6300 3500 50  0001 C CNN
+F 1 "VCC" H 6318 3823 50  0000 C CNN
+F 2 "" H 6300 3650 50  0001 C CNN
+F 3 "" H 6300 3650 50  0001 C CNN
+	1    6300 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6300 3450 6300 3650
+$EndSCHEMATC
